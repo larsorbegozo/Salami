@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/wezen/AndroidStudioProjects/Salami/app/src/main/res/layout/activity_main.xml" value="0.25657298277425206" />
+        <entry key="..\:/Users/wezen/AndroidStudioProjects/Salami/app/src/main/res/layout/fragment_menu_lang.xml" value="0.25657298277425206" />
+        <entry key="..\:/Users/wezen/AndroidStudioProjects/Salami/app/src/main/res/layout/view_sample_rv.xml" value="0.25657298277425206" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
