@@ -30,10 +30,11 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             tools:text="Japanese"
+            android:paddingStart="150dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/iv_country_flag"
-            app:layout_constraintRight_toRightOf="parent"/>
+            tools:ignore="RtlSymmetry" />
 
         <ImageButton
             android:id="@+id/button"
