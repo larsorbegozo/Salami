@@ -3,6 +3,7 @@ package com.larsorbegozo.salami.adapter
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.larsorbegozo.salami.R
 import com.larsorbegozo.salami.databinding.ViewSampleRvBinding
 import com.larsorbegozo.salami.model.Languages
 
@@ -12,6 +13,6 @@ class LangViewHolder(view: View):RecyclerView.ViewHolder(view) {
 
     fun render(langModel: Languages){
         binding.tvLangName.text = langModel.langName
-        Glide.with(binding.ivCountryFlag.context).load(langModel.countryFlag).into(binding.ivCountryFlag)
+        Glide.with(binding.ivCountryFlag.context).load(langModel.countryFlag).error(R.drawable.ic_launcher_foreground).into(binding.ivCountryFlag)
     }
 }
