@@ -16,7 +16,6 @@
             android:layout_height="match_parent"
             android:layout_margin="8dp"
             tools:background="@color/black"
-            android:background="@color/black"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             tools:ignore="ContentDescription" />
