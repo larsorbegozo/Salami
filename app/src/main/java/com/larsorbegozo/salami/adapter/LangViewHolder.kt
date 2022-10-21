@@ -19,7 +19,7 @@ class LangViewHolder(view: View):RecyclerView.ViewHolder(view) {
         Glide.with(binding.ivCountryFlag.context).load(langModel.countryFlag).error(R.drawable.ic_launcher_foreground).into(binding.ivCountryFlag)
         binding.cardView.setOnClickListener {
             // Navigate to next Fragment passing the LangName.text as argument to pass data between them
-            val action = MenuLangFragmentDirections.actionMenuLangFragmentToLearnFragment(binding.tvLangName.text.toString())
+            val action = MenuLangFragmentDirections.actionMenuLangFragmentToLearnFragment(langModel.langID.toInt())
             binding.button.findNavController().navigate(action)
         }
     }

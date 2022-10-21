@@ -20,7 +20,7 @@
         android:label="fragment_learn"
         tools:layout="@layout/fragment_learn" >
         <argument
-            android:name="langname"
-            app:argType="string" />
+            android:name="langID"
+            app:argType="integer" />
     </fragment>
 </navigation>

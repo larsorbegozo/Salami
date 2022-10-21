@@ -7,14 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import com.larsorbegozo.salami.R
 import com.larsorbegozo.salami.databinding.FragmentLearnBinding
+import com.larsorbegozo.salami.model.SentencesProvider
 
 class LearnFragment : Fragment(R.layout.fragment_learn) {
     companion object {
         // reference to the argument passed to LearnFragment
-        const val LANG = "langname"
+        const val LANGID = "langID"
     }
 
-    private lateinit var binding: FragmentLearnBinding
+    private var _binding: FragmentLearnBinding? = null
+    private val binding get() = _binding!!
     private lateinit var langId: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +24,7 @@ class LearnFragment : Fragment(R.layout.fragment_learn) {
 
         arguments?.let {
             // Get the argument passed for MenuLangFragment (the LangName.text)
-            langId = it.getString(LANG).toString()
+            langId = it.getInt(LANGID).toString()
         }
     }
 
@@ -31,13 +33,19 @@ class LearnFragment : Fragment(R.layout.fragment_learn) {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentLearnBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentLearnBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        chooseLanguage(langId.toInt())
 
-        binding.tvTest.text = langId
+        //binding.tvTest.text = langId
+    }
+
+    private fun chooseLanguage(x: Int) {
+        binding.wordEng.text = SentencesProvider.sentencesList[x].wordLang1.toString()
+        binding.wordSpa.text = SentencesProvider.sentencesList[x].wordSpa1.toString()
     }
 }
