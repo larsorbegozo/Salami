@@ -1,21 +1,19 @@
 package com.larsorbegozo.salami.view
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.larsorbegozo.salami.R
 import com.larsorbegozo.salami.adapter.LanguagesAdapter
-import com.larsorbegozo.salami.databinding.FragmentMenuLangBinding
+import com.larsorbegozo.salami.databinding.FragmentMenuBinding
 import com.larsorbegozo.salami.model.LanguagesProvider
 
-class MenuLangFragment : Fragment(R.layout.fragment_menu_lang) {
+class MenuFragment : Fragment(R.layout.fragment_menu) {
 
-    private var _binding: FragmentMenuLangBinding? = null
+    private var _binding: FragmentMenuBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -23,7 +21,7 @@ class MenuLangFragment : Fragment(R.layout.fragment_menu_lang) {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentMenuLangBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentMenuBinding.inflate(layoutInflater, container, false)
         initRecyclerView()
         return binding.root
     }

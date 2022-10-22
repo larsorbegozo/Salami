@@ -6,10 +6,10 @@ class SentencesProvider {
             Sentences(
                 "The cats are running through the forest",
                 "The gatos are running through the bosque",
-                "Cats",
-                "Forest",
-                "Gatos",
-                "Bosque"),
+                "First",
+                "Second",
+                "Primera",
+                "Segunda"),
             Sentences(
                 "The cats are running through the forest",
                 "The gatos are running through the bosque",
@@ -27,9 +27,9 @@ class SentencesProvider {
             Sentences(
                 "The cats are running through the forest",
                 "The gatos are running through the bosque",
-                "Konnichiwa",
+                "Sasukeeee",
                 "Forest",
-                "Yamete Kudasai",
+                "Narutoooo",
                 "Bosque"),
             Sentences(
                 "The cats are running through the forest",

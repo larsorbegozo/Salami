@@ -3,24 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/menuLangFragment">
+    app:startDestination="@id/menuFragment">
 
     <fragment
-        android:id="@+id/menuLangFragment"
-        android:name="com.larsorbegozo.salami.view.MenuLangFragment"
-        android:label="fragment_menu_lang"
-        tools:layout="@layout/fragment_menu_lang" >
+        android:id="@+id/menuFragment"
+        android:name="com.larsorbegozo.salami.view.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu">
         <action
-            android:id="@+id/action_menuLangFragment_to_learnFragment"
-            app:destination="@id/learnFragment" />
+            android:id="@+id/action_menuFragment_to_wordsFragment"
+            app:destination="@id/wordsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/learnFragment"
-        android:name="com.larsorbegozo.salami.view.LearnFragment"
-        android:label="fragment_learn"
-        tools:layout="@layout/fragment_learn" >
+        android:id="@+id/wordsFragment"
+        android:name="com.larsorbegozo.salami.view.WordsFragment"
+        android:label="fragment_words"
+        tools:layout="@layout/fragment_words">
         <argument
             android:name="langID"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_wordsFragment_to_phraseFragment"
+            app:destination="@id/phraseFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/phraseFragment"
+        android:name="com.larsorbegozo.salami.view.PhraseFragment"
+        android:label="fragment_phrase"
+        tools:layout="@layout/fragment_phrase" />
 </navigation>

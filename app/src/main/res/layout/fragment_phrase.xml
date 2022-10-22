@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MenuLangFragment">
+    tools:context=".view.PhraseFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_Menu"
+    <TextView
+        android:id="@+id/test_tv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints" />
-
+        android:layout_height="match_parent"
+        android:textSize="100sp"
+        tools:text="Awa"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
