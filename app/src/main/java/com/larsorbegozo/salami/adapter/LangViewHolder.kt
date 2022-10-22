@@ -16,7 +16,7 @@ class LangViewHolder(view: View):RecyclerView.ViewHolder(view) {
     fun render(langModel: Languages){
         binding.tvLangName.text = langModel.langName
 
-        // Load internet images with Glide
+        // Load images from internet with Glide
         Glide
             .with(binding.ivCountryFlag.context)
             .load(langModel.countryFlag)

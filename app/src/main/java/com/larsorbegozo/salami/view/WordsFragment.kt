@@ -53,7 +53,7 @@ class WordsFragment : Fragment(R.layout.fragment_words) {
         }
 
         binding.confirmButton.setOnClickListener {
-            val action = WordsFragmentDirections.actionWordsFragmentToPhraseFragment()
+            val action = WordsFragmentDirections.actionWordsFragmentToPhraseFragment(langId.toInt())
             binding.confirmButton.findNavController().navigate(action)
         }
     }
@@ -72,11 +72,11 @@ class WordsFragment : Fragment(R.layout.fragment_words) {
             .into(binding.spanishFlag)
 
         if (numberPhrase % 2 == 0) {
-            binding.wordEng.text = SentencesProvider.sentencesList[ID].wordLang1.toString()
-            binding.wordSpa.text = SentencesProvider.sentencesList[ID].wordSpa1.toString()
+            binding.wordEng.text = SentencesProvider.sentencesList[ID].wordLang1
+            binding.wordSpa.text = SentencesProvider.sentencesList[ID].wordSpa1
         } else {
-            binding.wordEng.text = SentencesProvider.sentencesList[ID].wordLang2.toString()
-            binding.wordSpa.text = SentencesProvider.sentencesList[ID].wordSpa2.toString()
+            binding.wordEng.text = SentencesProvider.sentencesList[ID].wordLang2
+            binding.wordSpa.text = SentencesProvider.sentencesList[ID].wordSpa2
         }
     }
 }

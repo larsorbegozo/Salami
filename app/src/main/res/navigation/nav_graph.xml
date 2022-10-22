@@ -30,5 +30,9 @@
         android:id="@+id/phraseFragment"
         android:name="com.larsorbegozo.salami.view.PhraseFragment"
         android:label="fragment_phrase"
-        tools:layout="@layout/fragment_phrase" />
+        tools:layout="@layout/fragment_phrase" >
+        <argument
+            android:name="langID"
+            app:argType="integer" />
+    </fragment>
 </navigation>
