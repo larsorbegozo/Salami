@@ -43,11 +43,11 @@ class WordsFragment : Fragment(R.layout.fragment_words) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        chooseLanguage(langId.toInt(), 0)
+        swapWords(langId.toInt(), 0)
         var x = 1
 
         binding.repeatButton.setOnClickListener {
-            chooseLanguage(langId.toInt(), x)
+            swapWords(langId.toInt(), x)
             x += 1
             binding.repeatButton.text = "Repetir"
         }
@@ -58,7 +58,7 @@ class WordsFragment : Fragment(R.layout.fragment_words) {
         }
     }
 
-    private fun chooseLanguage(ID: Int, numberPhrase: Int) {
+    private fun swapWords(ID: Int, numberPhrase: Int) {
         Glide
             .with(binding.langFlag.context)
             .load(LanguagesProvider.languagesList[ID].countryFlag)

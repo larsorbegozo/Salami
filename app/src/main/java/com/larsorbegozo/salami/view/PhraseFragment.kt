@@ -42,7 +42,6 @@ class PhraseFragment : Fragment(R.layout.fragment_phrase) {
                 Toast.makeText(context, "INCORRECTO", Toast.LENGTH_LONG).show()
             }
         }
-
         return binding.root
     }
 }
