@@ -31,8 +31,9 @@ class PhraseFragment : Fragment(R.layout.fragment_phrase) {
     ): View {
         _binding = FragmentPhraseBinding.inflate(layoutInflater, container, false)
 
+        // Incomplete Phrase text
         binding.incompletePhrase.text = SentencesProvider.sentencesList[langID.toInt()].phraseIncomplete
-
+        // Complete Phrase text
         val completePhrase = SentencesProvider.sentencesList[langID.toInt()].phraseComplete
 
         binding.button.setOnClickListener {

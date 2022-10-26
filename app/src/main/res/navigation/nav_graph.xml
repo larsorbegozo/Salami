@@ -13,7 +13,11 @@
         tools:layout="@layout/fragment_menu">
         <action
             android:id="@+id/action_menuFragment_to_wordsFragment"
-            app:destination="@id/wordsFragment" />
+            app:destination="@id/wordsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/wordsFragment"
@@ -25,7 +29,11 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_wordsFragment_to_phraseFragment"
-            app:destination="@id/phraseFragment" />
+            app:destination="@id/phraseFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/phraseFragment"

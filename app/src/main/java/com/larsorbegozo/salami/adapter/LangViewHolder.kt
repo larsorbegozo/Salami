@@ -7,6 +7,7 @@ import com.bumptech.glide.Glide
 import com.larsorbegozo.salami.R
 import com.larsorbegozo.salami.databinding.ViewSampleRvBinding
 import com.larsorbegozo.salami.model.Languages
+import com.larsorbegozo.salami.view.MainActivity
 import com.larsorbegozo.salami.view.MenuFragmentDirections
 
 class LangViewHolder(view: View):RecyclerView.ViewHolder(view) {
