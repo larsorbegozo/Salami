@@ -11,6 +11,13 @@ import com.larsorbegozo.salami.model.LanguagesProvider
 
 class MenuFragment : Fragment(R.layout.fragment_menu) {
 
+    companion object{
+        fun randomNumber(): Int {
+            //TODO: Remove hardcoded "2" for size of hashmap
+            return (0..2).random()
+        }
+    }
+
     private var _binding: FragmentMenuBinding? = null
     private val binding get() = _binding!!
 

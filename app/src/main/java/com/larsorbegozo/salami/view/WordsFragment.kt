@@ -16,18 +16,25 @@ class WordsFragment : Fragment(R.layout.fragment_words) {
     companion object {
         // reference to the argument passed to LearnFragment
         const val LANGID = "langID"
+        const val POSITION = "position"
+        const val LANGNAME = "langName"
     }
 
     private var _binding: FragmentWordsBinding? = null
     private val binding get() = _binding!!
-    private lateinit var langId: String
+
+    private lateinit var langID: String
+    private var position: Int = 0
+    private lateinit var langName: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         arguments?.let {
-            // Get the argument passed for MenuLangFragment (the LangName.text)
-            langId = it.getInt(LANGID).toString()
+            // Get the argument passed for MenuLangFragment (LangName.text)
+            langID = it.getInt(LANGID).toString()
+            position = it.getInt(POSITION)
+            langName = it.getString(LANGNAME).toString()
         }
     }
 
@@ -43,17 +50,17 @@ class WordsFragment : Fragment(R.layout.fragment_words) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        swapWords(langId.toInt(), 0)
+        swapWords(langID.toInt(), 0)
         var x = 1
 
         binding.repeatButton.setOnClickListener {
-            swapWords(langId.toInt(), x)
+            swapWords(langID.toInt(), x)
             x += 1
             binding.repeatButton.text = "Repetir"
         }
 
         binding.confirmButton.setOnClickListener {
-            val action = WordsFragmentDirections.actionWordsFragmentToPhraseFragment(langId.toInt())
+            val action = WordsFragmentDirections.actionWordsFragmentToPhraseFragment(langID.toInt(), position, langName)
             binding.confirmButton.findNavController().navigate(action)
         }
     }
@@ -72,11 +79,11 @@ class WordsFragment : Fragment(R.layout.fragment_words) {
             .into(binding.spanishFlag)
 
         if (numberPhrase % 2 == 0) {
-            binding.wordEng.text = SentencesProvider.sentencesList[ID].wordLang1
-            binding.wordSpa.text = SentencesProvider.sentencesList[ID].wordSpa1
+            binding.wordEng.text = SentencesProvider.sentenceProvider(langName, position).wordLang1
+            binding.wordSpa.text = SentencesProvider.sentenceProvider(langName, position).wordSpa1
         } else {
-            binding.wordEng.text = SentencesProvider.sentencesList[ID].wordLang2
-            binding.wordSpa.text = SentencesProvider.sentencesList[ID].wordSpa2
+            binding.wordEng.text = SentencesProvider.sentenceProvider(langName, position).wordLang2
+            binding.wordSpa.text = SentencesProvider.sentenceProvider(langName, position).wordSpa2
         }
     }
 }
