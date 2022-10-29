@@ -34,6 +34,12 @@
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
             app:popExitAnim="@anim/fade_out" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
+        <argument
+            android:name="langName"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/phraseFragment"
@@ -43,5 +49,11 @@
         <argument
             android:name="langID"
             app:argType="integer" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
+        <argument
+            android:name="langName"
+            app:argType="string" />
     </fragment>
 </navigation>

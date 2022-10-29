@@ -1,5 +1,7 @@
 package com.larsorbegozo.salami.adapter
 
+import android.util.Log
+import android.view.Menu
 import android.view.View
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -8,6 +10,7 @@ import com.larsorbegozo.salami.R
 import com.larsorbegozo.salami.databinding.ViewSampleRvBinding
 import com.larsorbegozo.salami.model.Languages
 import com.larsorbegozo.salami.view.MainActivity
+import com.larsorbegozo.salami.view.MenuFragment
 import com.larsorbegozo.salami.view.MenuFragmentDirections
 
 class LangViewHolder(view: View):RecyclerView.ViewHolder(view) {
@@ -25,8 +28,10 @@ class LangViewHolder(view: View):RecyclerView.ViewHolder(view) {
             .into(binding.ivCountryFlag)
 
         binding.cardView.setOnClickListener {
-            // Navigate to next Fragment passing the LangName.text as argument to pass data between them
-            val action = MenuFragmentDirections.actionMenuFragmentToWordsFragment(langModel.langID.toInt())
+            // Randomize a number for access a different hashmap index each time that a language is chosen
+            val randomizedNumber: Int = MenuFragment.randomNumber()
+            // Navigate to next Fragment passing the LangName.text and randomizedNumber as argument to pass data between them
+            val action = MenuFragmentDirections.actionMenuFragmentToWordsFragment(langModel.langID, randomizedNumber, langModel.langName)
             binding.button.findNavController().navigate(action)
         }
     }
