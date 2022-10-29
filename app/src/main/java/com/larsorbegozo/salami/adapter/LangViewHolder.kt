@@ -21,7 +21,7 @@ class LangViewHolder(view: View):RecyclerView.ViewHolder(view) {
         Glide
             .with(binding.ivCountryFlag.context)
             .load(langModel.countryFlag)
-            .error(R.drawable.ic_launcher_foreground)
+            .error(R.drawable.ic_baseline_error_24)
             .into(binding.ivCountryFlag)
 
         binding.cardView.setOnClickListener {

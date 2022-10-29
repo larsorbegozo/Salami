@@ -37,9 +37,9 @@
     </fragment>
     <fragment
         android:id="@+id/phraseFragment"
-        android:name="com.larsorbegozo.salami.view.PhraseFragment"
-        android:label="¡Corrige la frase!"
-        tools:layout="@layout/fragment_phrase">
+        android:name="com.larsorbegozo.salami.view.SentenceFragment"
+        android:label="¿Cómo se dice...?"
+        tools:layout="@layout/fragment_sentence">
         <argument
             android:name="langID"
             app:argType="integer" />
