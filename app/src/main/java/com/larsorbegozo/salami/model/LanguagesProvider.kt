@@ -11,6 +11,9 @@ class LanguagesProvider {
             Languages("Japonés", "https://i.imgur.com/YTdzEN5.png", 3, position),
             Languages("Italiano", "https://i.imgur.com/tY1vD1l.png", 4, position),
             Languages("Portugués", "https://i.imgur.com/Fkts0xv.png", 5, position),
+            Languages("Finlandés", "https://i.imgur.com/0rpMUR1.png", 6, position),
+            Languages("Sueco", "https://i.imgur.com/53JL3TL.png", 7, position),
+            Languages("Polaco", "https://i.imgur.com/2UzDbbA.png", 8, position)
         )
     }
 }

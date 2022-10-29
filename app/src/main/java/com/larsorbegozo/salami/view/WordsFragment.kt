@@ -69,13 +69,13 @@ class WordsFragment : Fragment(R.layout.fragment_words) {
         Glide
             .with(binding.langFlag.context)
             .load(LanguagesProvider.languagesList[ID].countryFlag)
-            .error(R.drawable.ic_launcher_foreground)
+            .error(R.drawable.ic_baseline_error_24)
             .into(binding.langFlag)
 
         Glide
             .with(binding.spanishFlag.context)
             .load("https://i.imgur.com/M0FbkZv.png")
-            .error(R.drawable.ic_launcher_foreground)
+            .error(R.drawable.ic_baseline_error_24)
             .into(binding.spanishFlag)
 
         if (numberPhrase % 2 == 0) {
