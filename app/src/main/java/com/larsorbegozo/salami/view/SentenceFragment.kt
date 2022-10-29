@@ -1,7 +1,6 @@
 package com.larsorbegozo.salami.view
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -60,14 +59,18 @@ class SentenceFragment : Fragment(R.layout.fragment_sentence) {
                     .into(binding.image)
                 // Change state into "SecondImage"
                 isSecondImage = !isSecondImage
+                // Leave in blank the text field
+                binding.textInputEditText.text = null
             }
             else if (SentencesProvider.sentenceProvider(langName, position).wordLang2
                     .equals(binding.textInputEditText.text.toString(), true)
                 && isSecondImage) {
                 Toast.makeText(context, "GANASTE", Toast.LENGTH_LONG).show()
+                binding.textInputEditText.text = null
             }
             else {
                 Toast.makeText(context, "INCORRECTO", Toast.LENGTH_SHORT).show()
+                binding.textInputEditText.text = null
             }
         }
         return binding.root
