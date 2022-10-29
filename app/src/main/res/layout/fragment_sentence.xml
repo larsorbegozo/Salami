@@ -40,14 +40,14 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Escribe la palabra correcta..."
-        app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
         android:layout_marginTop="24dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintTop_toBottomOf="@id/button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
